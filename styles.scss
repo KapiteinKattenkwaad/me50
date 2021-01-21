@@ -1,0 +1,132 @@
+$light-grey: #E6E7E9;
+$lighter-grey: #F8F9FA;
+$black: #272727;
+$transition: all .25s ease;
+$blue: #4A8DFB;
+$bluer: #3964BC;
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: $black;
+}
+
+.search {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  input[type=text] {
+    border: 1px solid $light-grey;
+    border-radius: 30px;
+    padding: 14px 12px;
+    transition: $transition;
+    margin: 1rem auto;
+    min-width: 55vw;
+    background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 14px;
+    &:hover {
+      box-shadow: 0px 0px 10px $light-grey;
+    }
+  }
+
+  input[type=submit] {
+    border-radius: 2px;
+    padding: 10px 16px;
+    background: $lighter-grey;
+    transition: $transition;
+    cursor: pointer;
+    max-width: 150px;
+    text-align: center;
+    margin: 1rem auto;
+    border: 1px solid transparent;
+    &:hover {
+      background: white;
+      border: 1px solid $light-grey;
+    }
+  }
+}
+
+.links {
+  text-align: right;
+  margin-top: 2rem;
+  font-size: 14px;
+  a {
+    color: $black;
+    text-align: center;
+    margin: 1rem .5rem 0 .5rem;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.flex{
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 205px 1fr;
+  align-items: center;
+  font-size: 14px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+}
+
+.advanced-search {
+  padding: 2rem 5rem;
+
+  h3 {
+    color: #D93025;
+    font-weight: normal;
+  }
+  h4 {
+    font-weight: normal;
+  }
+  hr {
+    border: 1px solid $light-grey;
+    margin: 2rem 0;
+  }
+  input {
+
+    padding:  6px;
+    border: 1px solid $light-grey;
+    @media (min-width: 992px) {
+      min-width: 700px;
+    }
+  }
+input[type=submit] {
+  color: white;
+  background: $blue;
+  text-align: center;
+  float: right;
+  min-width: 125px;
+  width: 125px;
+  border: 1px solid $bluer;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 12px 10px;
+  background: #F1F1F1;
+  img {
+    max-height: 35px;
+  }
+}
